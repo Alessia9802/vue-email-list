@@ -12,8 +12,7 @@
     <!-- Elenco lista mail -->
     <div id="app">
       <ul>
-        <li>{{userEmail}}</li>
-        <li>{{userEmailTwo}}</li>
+        <li v-for="mail in mails">{{mail}}</li>
       </ul>
     </div>
     <!-- link cdn Axios -->
