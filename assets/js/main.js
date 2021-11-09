@@ -9,20 +9,15 @@ const app = new Vue({
   data: {
     mails: [],
   },
-  methods()
-     {
-    function cicloFor(axios){
-        for(let i > 0; mails.lenght < 10; i++)
-        return true;
-    }
 
   mounted() {
-    axios
-      .get("https://flynn.boolean.careers/exercises/api/random/mail")
-      .then((result) => {
-        console.log(result.data.response);
-        this.mails.push(result.data.response);
-        
-      });
+    for (let i = 0; i < 10; i++) {
+      axios
+        .get("https://flynn.boolean.careers/exercises/api/random/mail")
+        .then((result) => {
+          console.log(result.data.response);
+          this.mails.push(result.data.response);
+        });
+    }
   },
 });
