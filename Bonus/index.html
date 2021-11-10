@@ -11,10 +11,8 @@
   <body>
     <!-- Elenco lista mail -->
     <div id="app">
-      <ul>
-        <li v-if="mail.length = '10' ? 'mails' : 'false'" v-for="mail in mails">
-          {{mail}}
-        </li>
+      <ul v-if="mails.length === 10">
+        <li v-for="mail in mails">{{mail}}</li>
       </ul>
     </div>
     <!-- link cdn Axios -->
